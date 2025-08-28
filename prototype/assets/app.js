@@ -1,0 +1,1 @@
+const projectList = document.getElementById('project-list');fetch('assets/dummy-data.json').then(response => response.json()).then(data => {data.projects.forEach(project => {const projectElement = document.createElement('div');projectElement.innerHTML = `<h2>${project.title}</h2><p>${project.description}</p>`;projectList.appendChild(projectElement);});});
